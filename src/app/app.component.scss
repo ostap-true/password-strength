@@ -1,0 +1,30 @@
+input {
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.square {
+  width: 25px;
+  height: 12px;
+  margin-right: 5px;
+  background-color: gray;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.error {
+  background-color: red;
+}
+
+.warning {
+  background-color: yellow;
+}
+
+.success {
+  background-color: green;
+}

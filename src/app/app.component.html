@@ -1,0 +1,16 @@
+<input type="text" [formControl]="text">
+<div class="container">
+  <div class="square" [ngClass]="
+      {'error': text.hasError('minlength') || text.getError('strength') === passwordStrength.EASY,
+      'warning': text.getError('strength') === passwordStrength.MEDIUM,
+      'success': text.getError('strength')=== passwordStrength.HARD
+    }
+      "></div>
+  <div class="square" [ngClass]="{
+      'error': text.getError('minlength'),
+      'warning': text.getError('strength') === passwordStrength.MEDIUM,
+      'success': text.getError('strength')=== passwordStrength.HARD}"></div>
+  <div class="square"
+    [ngClass]="{'error': text.hasError('minlength'),'success': text.getError('strength') === passwordStrength.HARD}">
+  </div>
+</div>
